@@ -19,5 +19,4 @@ $ npm run start
 $ npm run generate
 ```
 
-https://sugar182work.github.io/mypage/
 https://sugar182work.github.io/
