@@ -6,8 +6,8 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: 'SugarsWork',
-    title: 'Sugars github pages',
+    titleTemplate: 'ZuckerSystem',
+    title: 'ZuckerSystem github pages',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
