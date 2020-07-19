@@ -2,31 +2,17 @@
   <div>
     <div>
       <h2>Way of life</h2>
-      <p>
-        年の部分の背景透明にしているけど初期のparallax背景画像をスクロールして持ってくるのはなんで？Vuetify側の問題ぽいので放置。
-      </p>
+      <p>年の部分の背景透明にしているけど初期のparallax背景画像をスクロールして持ってくるのはなんで？Vuetify側の問題ぽいので放置。</p>
     </div>
     <div>
       <v-timeline>
-        <v-timeline-item
-          v-for="(year, i) in years"
-          :key="i"
-          :color="year.color"
-          small
-        >
+        <v-timeline-item v-for="(year, i) in years" :key="i" :color="year.color" small>
           <template v-slot:opposite>
-            <span
-              :class="`headline font-weight-bold ${year.color}--text`"
-              v-text="year.year"
-            ></span>
+            <span :class="`headline font-weight-bold ${year.color}--text`" v-text="year.year"></span>
           </template>
           <div class="py-4 mx-4">
-            <h2 :class="`headline font-weight-light mb-4 ${year.color}--text`">
-              {{ year.action }}
-            </h2>
-            <div>
-              {{ year.details }}
-            </div>
+            <h2 :class="`headline font-weight-light mb-4 ${year.color}--text`">{{ year.action }}</h2>
+            <div>{{ year.details }}</div>
           </div>
         </v-timeline-item>
       </v-timeline>
@@ -81,7 +67,7 @@ export default {
       },
       {
         color: 'cyan',
-        year: '2016-',
+        year: '2016-現在',
         action: 'WEBディレクター的な雑用・雑務',
         details:
           'ネイティブアプリ市場がObjectiveC→Swift／Java→Kotlinを経てJS系のクロスプラットフォームに移行しJava＋Androidはあまり需要がなくなって行く。JS系クロスプラットフォームはnode系WEBページ作成技術が前提となるので、そちら方面へのスキルシフト開始。WEBページ作成/GA設定/プレスページ作成・・・node,Vue等など職業不定・無職で現在に至る。'
