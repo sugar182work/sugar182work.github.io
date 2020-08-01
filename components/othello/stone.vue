@@ -8,7 +8,7 @@
     dark
     @click="pushBtn()"
   >
-    {{ ox }} : {{ oy }}
+    <!-- {{ ox }} : {{ oy }} -->
   </v-btn>
 </template>
 
@@ -24,8 +24,8 @@ export default {
       isNoPush: false,
       coordinate: {
         tmpox: this.ox, // 親からの座標をposに格納しておく
-        tmpoy: this.oy,
-      },
+        tmpoy: this.oy
+      }
     }
   },
   computed: {
@@ -44,17 +44,17 @@ export default {
         case 1:
           return '#FFF'
         default:
-          return '#AAA'
+          return 'rgba(0, 0, 0, 0)'
       }
     },
 
-    ...mapState('othellodata', { getStorecoordinateData: 'coordinateData' }),
+    ...mapState('othellodata', { getStorecoordinateData: 'coordinateData' })
   },
   methods: {
     pushBtn: function() {
       const pos = { ox: this.ox, oy: this.oy }
       this.$store.dispatch('othellodata/putStone', pos)
-    },
-  },
+    }
+  }
 }
 </script>
